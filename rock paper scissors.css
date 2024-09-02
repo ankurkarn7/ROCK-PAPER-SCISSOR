@@ -12,8 +12,14 @@
     font-size:2rem;
     width:400;
 }
-
 .choice{
+    height:200px;
+    width:200px;
+    border:2px solid black;
+    border-radius:50%;
+    margin:2rem;
+}
+.image{
     height:200px;
     width:200px;
     border:2px solid black;
@@ -23,6 +29,13 @@
 .choice:hover{
     opacity:60%;
     cursor:pointer;
+}
+.choices{
+    display:inline-block;
+}
+.adjust{
+    position:relative;
+    top:-90px;
 }
 .text{
     font-size:2rem;
@@ -44,4 +57,38 @@
 }
 .computer{
     font-size : 1.5rem;
+}
+
+
+.handshake-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+}
+
+.image {
+    position: unset;
+    transform-origin: bottom center; /* Pivot point for rotation */
+}
+
+.uChoice {
+    animation: shakeUpDownLeft 1s infinite;
+}
+
+.cChoice {
+    animation: shakeUpDownRight 1s infinite;
+}
+
+@keyframes shakeUpDownLeft {
+    0% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
+@keyframes shakeUpDownRight {
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
 }
