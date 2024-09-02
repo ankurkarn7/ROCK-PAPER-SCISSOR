@@ -34,42 +34,42 @@ const playgame = (userChoice) => {
         display.innerText = "it's a draw"
         display.style.backgroundColor = "skyblue";
         if(userChoice == "rock"){
-            uChoice.src = 'yes/rock.png';
-            cChoice.src = 'yes/rock1.png';
+            uChoice.src = 'rock.png';
+            cChoice.src = 'rock1.png';
         }
         if(userChoice == "paper"){
-            uChoice.src = 'yes/paper.png';
-            cChoice.src = 'yes/paper1.png'
+            uChoice.src = 'paper.png';
+            cChoice.src = 'paper1.png'
         }
         if(userChoice == "scissor"){
-            uChoice.src = 'yes/scissor.png';
-            cChoice.src = 'yes/scissor1.png';
+            uChoice.src = 'scissor.png';
+            cChoice.src = 'scissor1.png';
         }
     } else {
         let userWin = true
         if (userChoice == "rock") {
-            uChoice.src = 'yes/rock.png';
+            uChoice.src = 'rock.png';
             if(compChoice == "paper"){
                 userWin = false;
-                cChoice.src = 'yes/paper1.png';
+                cChoice.src = 'paper1.png';
             } else{
-                cChoice.src = 'yes/scissor1.png';
+                cChoice.src = 'scissor1.png';
             }
         } else if(userChoice == "paper") {
-            uChoice.src = 'yes/paper.png';
+            uChoice.src = 'paper.png';
             if(compChoice == "scissor"){
                 userWin = false;
-                cChoice.src = 'yes/scissor1.png';
+                cChoice.src = 'scissor1.png';
             } else{
-                cChoice.src = 'yes/rock1.png';
+                cChoice.src = 'rock1.png';
             }
         } else if(userChoice == "scissor"){
-            uChoice.src = 'yes/scissor.png';
+            uChoice.src = 'scissor.png';
             if(compChoice == "rock"){
                 userWin = false;
-                cChoice.src = 'yes/rock1.png';
+                cChoice.src = 'rock1.png';
             } else{
-                cChoice.src = 'yes/paper1.png';
+                cChoice.src = 'paper1.png';
             }
         }
         result(userWin, userChoice, compChoice)
